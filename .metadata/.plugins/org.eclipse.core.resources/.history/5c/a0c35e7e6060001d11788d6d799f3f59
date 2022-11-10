@@ -1,0 +1,19 @@
+package com.flashpay.services;
+
+
+import org.springframework.stereotype.Service;
+
+import com.flashpay.model.Customer;
+import com.masai.exception.LoginException;
+
+@Service
+public class CustomerServicesImpl implements CustomerServices {
+
+	@Override
+	public Customer createNewSignUp(Customer newCustomer) throws LoginException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

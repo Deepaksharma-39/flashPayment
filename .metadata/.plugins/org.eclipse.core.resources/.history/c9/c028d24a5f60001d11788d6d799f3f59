@@ -1,0 +1,5 @@
+package com.flashpay.model;
+
+public class Customer {
+
+}

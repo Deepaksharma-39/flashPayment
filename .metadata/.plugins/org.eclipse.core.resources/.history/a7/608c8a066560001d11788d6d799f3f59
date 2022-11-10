@@ -1,0 +1,31 @@
+package com.flashpay.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.Size;
+
+
+
+@Entity
+public class Customer {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer userId;
+	
+//	@Null
+//	@Size(min = 3,max = 15)
+	private String name;
+	
+//	@Null
+//	@Size(min = 10,max = 10)
+	private String mobile;
+//	
+//	@Null
+//	@Size(min = 8)
+	private String password;
+	
+}

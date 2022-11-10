@@ -1,0 +1,5 @@
+package com.flashpay.controller;
+
+public class CustomerController {
+
+}

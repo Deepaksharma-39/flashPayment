@@ -1,0 +1,9 @@
+package com.flashpay.services;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.flashpay.model.Customer;
+
+public interface CustomerServices extends JpaRepository<Customer, Integer> {
+
+}

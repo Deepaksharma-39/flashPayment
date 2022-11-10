@@ -1,0 +1,45 @@
+package com.flashpay.services;
+
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.flashpay.model.Customer;
+import com.flashpay.model.Wallet;
+import com.flashpay.repositry.CustomerRepositry;
+import com.masai.exception.LoginException;
+
+@Service
+public class CustomerServicesImpl implements CustomerServices {
+	
+	@Autowired
+	private CustomerRepositry repo;
+	
+	@Override
+	public Customer createNewSignUp(Customer newCustomer) throws LoginException {
+		
+		
+		Optional<Customer> opt= repo.findById(newCustomer.getUserId());
+		if(opt.isPresent()) {
+			throw new LoginException("Customer already Present");
+		}
+		
+		Wallet wallet=new Wallet();
+		wallet.setBalance(0);
+		wallet.setCustomer(newCustomer);
+		newCustomer.setWallet(wallet);
+		
+		Customer customer=repo.save(newCustomer);
+		
+		
+		
+		if(customer ==null)throw new LoginException("failed");
+		return newCustomer;
+	}
+
+	
+
+
+}
