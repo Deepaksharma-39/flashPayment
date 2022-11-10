@@ -1,9 +1,12 @@
 package com.flashpay.services;
 
+import com.flashpay.exception.SignupException;
+import com.flashpay.exception.LoginException;
 import com.flashpay.model.Customer;
-import com.masai.exception.LoginException;
 
 public interface CustomerServices{
 
-	public Customer createNewSignUp(Customer newCustomer) throws LoginException;
+	public Customer createNewSignUp(Customer newCustomer) throws SignupException;
+	
+	public Customer updateCustomer(Customer customer,String key)throws LoginException;
 }

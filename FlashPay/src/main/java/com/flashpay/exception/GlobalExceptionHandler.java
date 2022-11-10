@@ -1,4 +1,4 @@
-package com.masai.exception;
+package com.flashpay.exception;
 
 import java.time.LocalDateTime;
 

@@ -7,8 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import lombok.Data;
+
 @Entity
-public class Wallet {
+public @Data class Wallet {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,37 +21,9 @@ public class Wallet {
 	@OneToOne(cascade = CascadeType.ALL)
 	private Customer customer;
 
-	public Integer getWalletId() {
-		return walletId;
-	}
-
-	public void setWalletId(Integer walletId) {
-		this.walletId = walletId;
-	}
-
-	public double getBalance() {
-		return balance;
-	}
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
-	@Override
-	public String toString() {
-		return "Wallet [walletId=" + walletId + ", balance=" + balance + ", customer=" + customer + "]";
-	}
-	
 	public Wallet() {
 
 	}
+	
 	
 }

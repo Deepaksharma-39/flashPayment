@@ -12,10 +12,12 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Data;
+
 
 
 @Entity
-public class Customer {
+public @Data class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,54 +41,6 @@ public class Customer {
 	private Wallet wallet;
 	
 
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public Wallet getWallet() {
-		return wallet;
-	}
-
-	public void setWallet(Wallet wallet) {
-		this.wallet = wallet;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Customer [userId=" + userId + ", name=" + name + ", mobile=" + mobile + ", password=" + password + "]";
-	}
-	
-	
-	
 	
 	
 }
