@@ -1,0 +1,12 @@
+package com.flashpay.customENUMS;
+
+public enum BillType {
+
+	MOBILE_RECHARGE,
+	FAST_TAG,
+	CABLE_TV,
+	ELECTRICITY_BILL,
+	INTERNET_BILL,
+	SETUPBOX_RECHARGE,
+	WATER_BILL;
+}

@@ -31,5 +31,8 @@ public class Wallet {
 	@JsonIgnore
 	private List<BeneficiaryDetails> beneficiaryDetails;
 	
+	@OneToMany
+	@JsonIgnore
+	private List<Transaction> transaction;
 	
 }
