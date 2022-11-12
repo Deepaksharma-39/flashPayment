@@ -1,15 +1,19 @@
 package com.flashpay.services;
 
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.flashpay.exception.LoginException;
 import com.flashpay.exception.SignupException;
-
+import com.flashpay.exception.TransactionException;
+import com.flashpay.model.BankAccount;
 import com.flashpay.model.Customer;
 import com.flashpay.model.UserSession;
 import com.flashpay.model.Wallet;
+import com.flashpay.repositry.BankAccountRepositry;
 import com.flashpay.repositry.CustomerRepositry;
 import com.flashpay.repositry.SessionRepositry;
 
@@ -19,8 +23,11 @@ public class CustomerServicesImpl implements CustomerServices {
 	@Autowired
 	private CustomerRepositry customerRepo;
 	
+	@Autowired
 	private SessionRepositry sessionRepo;
 	
+	@Autowired
+	private BankAccountRepositry bankRepo;
 	
 	@Override
 	public Customer createNewSignUp(Customer newCustomer) throws SignupException {
@@ -62,8 +69,9 @@ public class CustomerServicesImpl implements CustomerServices {
 			throw new LoginException("Invalid Customer Details, please login first");
 	
 	}
-	
 
+
+	
 	
 
 

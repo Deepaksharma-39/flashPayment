@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.flashpay.exception.LoginException;
 import com.flashpay.exception.SignupException;
+import com.flashpay.exception.TransactionException;
 import com.flashpay.model.Customer;
+import com.flashpay.model.Wallet;
 import com.flashpay.services.CustomerServices;
 
 @RestController
@@ -33,5 +35,7 @@ public class CustomerController {
 		Customer updatedCustomer=service.updateCustomer(customer, key);
 		return new ResponseEntity<Customer>(updatedCustomer,HttpStatus.OK);
 	}
+	
+	
 	
 }
