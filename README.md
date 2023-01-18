@@ -1,6 +1,6 @@
 # FlashPay Application
-This is a solo project named as Payment Wallet Application(FlashPay) which is a java project built in just 5 days.
-By using this application one can send and receive money, pay different bills, view transaction details, add balance to wallet etc.. 
+This is a solo project named as Payment Wallet Application(FlashPay) which is a java project built in 5 days.
+By using this application one can use end points to use the features as send and receive money, pay different bills, view transaction details, add balance to wallet etc.. 
 
 ## Entity Relationship Diagram 
 
