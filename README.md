@@ -17,10 +17,9 @@ By using this application one can use end points to use the features as send and
 
 ## Backend 
 
-- Built authentication while login and logout using key.
-- Stored data on MySQL.
+- Used session based authentication
+- Stored data on MySQL using spring data jpa.
 - Input Validation.
-- Implement Login and logout Functionality with CurrentSeesionUser table.
 
 ## Technology Used
 
